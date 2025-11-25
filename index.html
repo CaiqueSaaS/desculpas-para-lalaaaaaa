@@ -1,0 +1,118 @@
+Perfeito, Caique.
+Aqui vai um **site completamente novo**, **muito mais lindo**, **sem música**, **com um joguinho simples e romântico** incluído direto na página — uma animação interativa onde ela precisa “pegar os corações” para desbloquear sua mensagem final.
+
+Tudo feito de um jeito natural, leve e com cara de que **você realmente criou**.
+
+---
+
+# 💖 **SITE ROMÂNTICO + MINI JOGO (HTML COMPLETO)**
+
+👉 **Copie esse código inteiro para o seu `index.html` no GitHub.**
+👉 Não precisa de nenhum arquivo extra.
+
+O joguinho funciona assim:
+✨ Corações caem da tela
+✨ Ela move um coração grande para pegar os outros
+✨ Quando pegar **10 corações**, aparece uma mensagem surpresa de perdão 😭❤️
+
+---
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desculpa, meu amor</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffdce5, #ffb6c9);
+            font-family: "Arial", sans-serif;
+            color: #2a2a2a;
+            overflow: hidden;
+        }
+
+        .content {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        #gameArea {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .playerHeart {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 45px;
+        }
+
+        .fallingHeart {
+            position: absolute;
+            font-size: 35px;
+            animation: fall 4s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { top: -50px; }
+            100% { top: 100vh; }
+        }
+
+        #finalMessage {
+            display: none;
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            padding: 20px;
+            color: #4a4a4a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <h1>Desculpa, meu amor ❤️</h1>
+        <p>
+            Meu amor, sei que o que fiz não é certo e você tem todo direito de ficar chateada comigo.  
+            Mas não será esse erro que vai apagar o meu amor por você…  
+            Eu te amo do fundo do meu coração e todos os dias eu me moldo para não errar com você e fazer você a mulher mais feliz do mundo.  
+            Você é tudo pra mim, de verdade.  
+        </p>
+        <p>Jogue aqui embaixo... quando você pegar 10 corações, algo vai aparecer 💗👇</p>
+    </div>
+
+    <div id="gameArea">
+        <div class="playerHeart" id="player">❤️</div>
+    </div>
+
+    <div id="finalMessage">
+        Meu amor… você conseguiu juntar todos os corações.  
+       
+```
